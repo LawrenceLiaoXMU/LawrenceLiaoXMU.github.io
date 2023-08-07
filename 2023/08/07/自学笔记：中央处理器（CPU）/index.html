@@ -15,7 +15,7 @@
 
 
 
-<title>自学笔记：中央处理器（CPU） | Liao&#39;s Blog：计算机-数字媒体技术学习记录</title>
+<title>计算机科学速成课第七课自学笔记：中央处理器（CPU） | Liao&#39;s Blog：计算机-数字媒体技术学习记录</title>
 
 
 
@@ -130,11 +130,73 @@
                 <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">自学笔记：中央处理器（CPU）</h1>
+            <h1 class="post-title">计算机科学速成课第七课自学笔记：中央处理器（CPU）</h1>
             
                 <div class="post-meta">
                     
@@ -159,7 +221,9 @@
         </header>
 
         <div class="post-content">
-            
+            <p>笔记结合课程、百度、个人理解整理，如有错误，恳请指正。</p>
+<h1 id="一、简单总结"><a href="#一、简单总结" class="headerlink" title="一、简单总结"></a>一、简单总结</h1><h3 id="CPU的主要功能有：处理指令、执行操作、控制时间、处理数据"><a href="#CPU的主要功能有：处理指令、执行操作、控制时间、处理数据" class="headerlink" title="CPU的主要功能有：处理指令、执行操作、控制时间、处理数据"></a>CPU的主要功能有：处理指令、执行操作、控制时间、处理数据</h3><h3 id="CPU主要由-①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组-④时钟-组成-而在其中："><a href="#CPU主要由-①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组-④时钟-组成-而在其中：" class="headerlink" title="CPU主要由 ①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组 ④时钟 组成 而在其中："></a>CPU主要由 ①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组 ④时钟 组成 而在其中：</h3><p>①ALU主要完成处理数据的任务<br>②控制单元包含寄存器（指令寄存器、指令地址寄存器）、指令译码器、操作控制器，主要完成上述处理指令、执行操作的任务<br>③寄存器组用来临时存储数据和操作数据<br>④时钟主要管理CPU执行程序的节奏 ，CPU 执行“取指令→解码→执行”中每一步的速度叫做“时钟速度”，单位赫兹Hz，表示频率，超频的概率就是从中而来的</p>
+<h3 id="CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束"><a href="#CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束" class="headerlink" title="CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束"></a>CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束</h3><h1 id="二、具体步骤举例"><a href="#二、具体步骤举例" class="headerlink" title="二、具体步骤举例"></a>二、具体步骤举例</h1>
         </div>
 
         
@@ -187,7 +251,9 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA/"># -计算机科学速成课 -计算机科学导论</a>
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/"># 计算机科学速成课</a>
+                    
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA/"># 计算机科学导论</a>
                     
                         
                 </span>
