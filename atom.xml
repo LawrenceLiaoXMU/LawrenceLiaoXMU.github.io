@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Liao&#39;s Blog：计算机————数字媒体技术学习记录</title>
+  <title>Liao&#39;s Blog：计算机-数字媒体技术学习记录</title>
   
   <subtitle>计算机学习记录</subtitle>
   <link href="https://lawrenceliaoxmu.github.io/atom.xml" rel="self"/>
   
   <link href="https://lawrenceliaoxmu.github.io/"/>
-  <updated>2023-08-07T05:50:55.040Z</updated>
+  <updated>2023-08-07T13:26:35.894Z</updated>
   <id>https://lawrenceliaoxmu.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
+    <title>你好！</title>
+    <link href="https://lawrenceliaoxmu.github.io/2023/08/07/%E4%BD%A0%E5%A5%BD%EF%BC%81/"/>
+    <id>https://lawrenceliaoxmu.github.io/2023/08/07/%E4%BD%A0%E5%A5%BD%EF%BC%81/</id>
+    <published>2023-08-07T12:59:05.000Z</published>
+    <updated>2023-08-07T13:26:35.894Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到我的博客，我是廖羿杰，一名从普通高中出来的普通大学生，即将就读于厦门大学计算机类，将来在大二分流的时候决定学习数字媒体技术专业。</p><h3 id="这个网站是用来干什么的？"><a href="#这个网站是用来干什么的？" class="headerlink" title="这个网站是用来干什么的？"></a>这个网站是用来干什么的？</h3><p>主要是用于整理个人学习计算机和数媒技相关的笔记和心得，更好地提升个人能力，同时也可以作为日志来记录所见所闻所感。</p><h3 id="明明没有什么要说的为什么要分点？"><a href="#明明没有什么要说的为什么要分点？" class="headerlink" title="明明没有什么要说的为什么要分点？"></a>明明没有什么要说的为什么要分点？</h3><p>只是为了看看这上面的博文是怎么编辑的hhh</p><h3 id="另外！"><a href="#另外！" class="headerlink" title="另外！"></a>另外！</h3><p>特别感谢好友小丁在本博客建立时提供的帮助！<br>（等我之后在学怎么搞友情链接，我先把大神的网站放在这里）：<a href="https://www.ygxz.xyz/">一个小站</a> 还有 <a href="https://www.ygxz.in/">小站背面</a></p><h3 id="还有！"><a href="#还有！" class="headerlink" title="还有！"></a>还有！</h3><p>我其实是一个多年的电子音乐制作人（只不过因为高中学业就好久没制作了orz）<br>我有一些还听的过去的电子音乐作品（勉勉强强） 点击 <a href="https://music.163.com/#/playlist?id=8590118998">这里</a> 听一下</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎来到我的博客，我是廖羿杰，一名从普通高中出来的普通大学生，即将就读于厦门大学计算机类，将来在大二分流的时候决定学习数字媒体技术专业。&lt;/p&gt;
+&lt;h3 id=&quot;这个网站是用来干什么的？&quot;&gt;&lt;a href=&quot;#这个网站是用来干什么的？&quot; class=&quot;headerlink&quot;</summary>
+      
+    
+    
+    
+    <category term="日常记录" scheme="https://lawrenceliaoxmu.github.io/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="日常记录" scheme="https://lawrenceliaoxmu.github.io/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World（这个文件是建博客之后自带的我留着是为了看博客的编辑模板23333）</title>
     <link href="https://lawrenceliaoxmu.github.io/2023/08/07/hello-world/"/>
     <id>https://lawrenceliaoxmu.github.io/2023/08/07/hello-world/</id>
     <published>2023-08-07T05:50:55.040Z</published>
-    <updated>2023-08-07T05:50:55.040Z</updated>
+    <updated>2023-08-07T13:21:56.626Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
@@ -32,6 +57,8 @@
       
     
     
+    
+    <category term="没什么用的" scheme="https://lawrenceliaoxmu.github.io/categories/%E6%B2%A1%E4%BB%80%E4%B9%88%E7%94%A8%E7%9A%84/"/>
     
     
   </entry>
