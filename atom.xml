@@ -6,7 +6,7 @@
   <link href="https://lawrenceliaoxmu.github.io/atom.xml" rel="self"/>
   
   <link href="https://lawrenceliaoxmu.github.io/"/>
-  <updated>2023-08-07T14:59:39.879Z</updated>
+  <updated>2023-08-08T13:17:58.119Z</updated>
   <id>https://lawrenceliaoxmu.github.io/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>计算机科学速成课第七课自学笔记：中央处理器（CPU）</title>
+    <title>《计算机科学速成课》第七、八、九课自学笔记：有关中央处理器（CPU）</title>
     <link href="https://lawrenceliaoxmu.github.io/2023/08/07/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%88CPU%EF%BC%89/"/>
     <id>https://lawrenceliaoxmu.github.io/2023/08/07/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%88CPU%EF%BC%89/</id>
     <published>2023-08-07T14:16:58.000Z</published>
-    <updated>2023-08-07T14:59:39.879Z</updated>
+    <updated>2023-08-08T13:17:58.119Z</updated>
     
-    <content type="html"><![CDATA[<p>笔记结合课程、百度、个人理解整理，如有错误，恳请指正。</p><h1 id="一、简单总结"><a href="#一、简单总结" class="headerlink" title="一、简单总结"></a>一、简单总结</h1><h3 id="CPU的主要功能有：处理指令、执行操作、控制时间、处理数据"><a href="#CPU的主要功能有：处理指令、执行操作、控制时间、处理数据" class="headerlink" title="CPU的主要功能有：处理指令、执行操作、控制时间、处理数据"></a>CPU的主要功能有：处理指令、执行操作、控制时间、处理数据</h3><h3 id="CPU主要由-①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组-④时钟-组成-而在其中："><a href="#CPU主要由-①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组-④时钟-组成-而在其中：" class="headerlink" title="CPU主要由 ①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组 ④时钟 组成 而在其中："></a>CPU主要由 ①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组 ④时钟 组成 而在其中：</h3><p>①ALU主要完成处理数据的任务<br>②控制单元包含寄存器（指令寄存器、指令地址寄存器）、指令译码器、操作控制器，主要完成上述处理指令、执行操作的任务<br>③寄存器组用来临时存储数据和操作数据<br>④时钟主要管理CPU执行程序的节奏 ，CPU 执行“取指令→解码→执行”中每一步的速度叫做“时钟速度”，单位赫兹Hz，表示频率，超频的概率就是从中而来的</p><h3 id="CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束"><a href="#CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束" class="headerlink" title="CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束"></a>CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束</h3><h1 id="二、具体步骤举例"><a href="#二、具体步骤举例" class="headerlink" title="二、具体步骤举例"></a>二、具体步骤举例</h1>]]></content>
+    <content type="html"><![CDATA[<p>因为在课程中第七、八、九课联系较紧密，故在同一文档中梳理。<br>笔记结合课程、上网查询、个人理解整理，如有错误，恳请指正。</p><h1 id="第七课-中央处理器基础知识"><a href="#第七课-中央处理器基础知识" class="headerlink" title="第七课 中央处理器基础知识"></a>第七课 中央处理器基础知识</h1><h2 id="一、简单总结"><a href="#一、简单总结" class="headerlink" title="一、简单总结"></a>一、简单总结</h2><h3 id="CPU的主要功能有：处理指令、执行操作、控制时间、处理数据"><a href="#CPU的主要功能有：处理指令、执行操作、控制时间、处理数据" class="headerlink" title="CPU的主要功能有：处理指令、执行操作、控制时间、处理数据"></a>CPU的主要功能有：处理指令、执行操作、控制时间、处理数据</h3><h3 id="CPU主要由-①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组-④时钟-组成-而在其中："><a href="#CPU主要由-①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组-④时钟-组成-而在其中：" class="headerlink" title="CPU主要由 ①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组 ④时钟 组成 而在其中："></a>CPU主要由 ①运算器（计算逻辑单元ALU）②控制器（控制单元）③寄存器组 ④时钟 组成 而在其中：</h3><p>①ALU主要完成处理数据的任务。<br>②控制单元包含寄存器（指令寄存器、指令地址寄存器）、指令译码器、操作控制器，主要完成上述处理指令、执行操作的任务。<br>③寄存器组用来临时存储数据和操作数据。<br>④时钟主要管理CPU执行程序的节奏 ，CPU 执行“取指令→解码→执行”中每一步的速度叫做“时钟速度”，单位赫兹Hz，表示频率，超频的概率就是从中而来的。当今很多计算机都能能够做到动态调整频率。</p><h3 id="CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束"><a href="#CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束" class="headerlink" title="CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束"></a>CPU的大致过程为：取指令阶段-解码阶段-执行阶段-结束</h3><p><img src="/images/cpu%E7%BB%84%E6%88%90.png" alt="Lena"></p><ul><li>这是图1 主要展示CPU的构成</li></ul><h2 id="二、具体步骤举例"><a href="#二、具体步骤举例" class="headerlink" title="二、具体步骤举例"></a>二、具体步骤举例</h2><ul><li><em>这里的例子仅仅是例子，指令不一定是八位</em><br><em>在例子中，指令前四位是操作码，后四位是CPU内寄存器的地址或者从RAM获取数据、向RAM输入数据的地址等等</em></li></ul><p><img src="/images/%E6%8C%87%E4%BB%A4%E5%AF%B9%E7%85%A7%E8%A1%A8.png" alt="Lena"></p><ul><li>这是图2<br><img src="/images/%E8%AE%A1%E7%AE%971.png" alt="Lena"></li><li>这是图3</li></ul><h3 id="1-取指令阶段"><a href="#1-取指令阶段" class="headerlink" title="1.取指令阶段"></a>1.取指令阶段</h3><p>在图3中我们看到，此时指令地址寄存器中的地址为0000 0010，对应的数字是2。<br>于是RAM的地址2的数据1000 0100进入到指令储存器中。</p><h3 id="2-解码阶段"><a href="#2-解码阶段" class="headerlink" title="2.解码阶段"></a>2.解码阶段</h3><p>由逻辑门组成的控制单元对指令进行解码，同时检验操作码<br><img src="/images/%E6%A3%80%E9%AA%8C%E4%B8%80%E4%B8%8B.png" alt="Lena"></p><ul><li>这是图4  主要是该部分的逻辑门组成方式（不过指令并不是此处举出的）</li></ul><h3 id="3-执行阶段"><a href="#3-执行阶段" class="headerlink" title="3.执行阶段"></a>3.执行阶段</h3><p>根据图1，1000 0100指令前四位所代表的操作是将两个寄存器的值相加，再将结果传输进第二个寄存器当中。<br>再看后四位，0100代表的并不是RAM地址 01代表的是CPU中寄存器B，00代表的是寄存器A。</p><ul><li><em>因为00在01后面 所以实际上寄存器A代表的是指令中的“第二个寄存器”。</em></li></ul><p>所以A中的0000 0011（3）和B中的00001110（14）经过控制单元 通过ALU进行相加，ALU再将相加所得的数据返回回A。<br>这里就类似于编程当中可能会出现的A&#x3D;A+B了，如果不停止的话，这个过程会无穷无尽加下去。而在这里，控制单元会用一个寄存器暂时保存结果，关闭ALU，然后再返回值到A中。<br><img src="/images/%E8%AE%A1%E7%AE%972.png" alt="Lena"></p><ul><li>这是图5，可以看到3+14&#x3D;17 也就是A中的10001</li></ul><h3 id="4-最后地址寄存器数值-1-执行结束"><a href="#4-最后地址寄存器数值-1-执行结束" class="headerlink" title="4.最后地址寄存器数值+1 执行结束"></a>4.最后地址寄存器数值+1 执行结束</h3><h1 id="第八课-指令和程序"><a href="#第八课-指令和程序" class="headerlink" title="第八课 指令和程序"></a>第八课 指令和程序</h1><h2 id="一、相关概念"><a href="#一、相关概念" class="headerlink" title="一、相关概念"></a>一、相关概念</h2><p>1.指令：指示计算机要做什么的代码，有多种分类，比如数学指令、内存指令。<br>2.程序：由多条指令共组成。<br>3.指令集：记录指令名称、用法、操作码以及所需 RAM 地址位数的表格（如七-2）。</p><h2 id="二、一些基础的指令"><a href="#二、一些基础的指令" class="headerlink" title="二、一些基础的指令"></a>二、一些基础的指令</h2><p>1.LOAD指令：读取地址中的指令并存储到指定位置。<br>2.ADD指令：相加多处数据并存到指定位置（第七课笔记举的例子）。<br>3.JUMP 指令：让程序会跳转至对应的 RAM 地址读取数据。可以是无条件跳转：<br><img src="/images/%E5%BE%AA%E7%8E%AF.png" alt="Lena"></p><ul><li>这是图1，表现出编程中的循环<br>也可以进行有条件的跳转。（如 JUMP-negative，若目标值为负数才执行跳转。）<br>4.HALT指令：停止程序。</li></ul><h2 id="三、指令的发展"><a href="#三、指令的发展" class="headerlink" title="三、指令的发展"></a>三、指令的发展</h2><p>课程当中举出的指令都只有8位，能表示的内容太少，有如下两个解决方法。<br>1.最直接的是用增加指令位数，如 32 位或 64 位。<br>2.其次是采用“可变指令长度”，令不同的指令的长度不同，尽量节约位数。假设 1 个字为 16 位，如果某指令不需要操作内存，则可以省去寻址的位数。（该情况下，部分指令，如 JUMP，后面需要跟的数据称为立即值。）</p><h1 id="第九课-高级CPU设计（CPU的升级）"><a href="#第九课-高级CPU设计（CPU的升级）" class="headerlink" title="第九课 高级CPU设计（CPU的升级）"></a>第九课 高级CPU设计（CPU的升级）</h1><h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>早期计算机提速是通过减少晶体管切换的时间进行的，但是这种方式具有瓶颈。随着发展，指令增加，各种专门电路出现，CPU也需要改进增速。</p><h2 id="二、通过优化单个指令流来进行改进"><a href="#二、通过优化单个指令流来进行改进" class="headerlink" title="二、通过优化单个指令流来进行改进"></a>二、通过优化单个指令流来进行改进</h2><p>1.缓存的运用<br>缓存是在 CPU 中的小块 RAM，用于存储批量指令。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;笔记结合课程、百度、个人理解整理，如有错误，恳请指正。&lt;/p&gt;
-&lt;h1 id=&quot;一、简单总结&quot;&gt;&lt;a href=&quot;#一、简单总结&quot; class=&quot;headerlink&quot; title=&quot;一、简单总结&quot;&gt;&lt;/a&gt;一、简单总结&lt;/h1&gt;&lt;h3 id=&quot;CPU的主要功能有：处理指令</summary>
+    <summary type="html">&lt;p&gt;因为在课程中第七、八、九课联系较紧密，故在同一文档中梳理。&lt;br&gt;笔记结合课程、上网查询、个人理解整理，如有错误，恳请指正。&lt;/p&gt;
+&lt;h1 id=&quot;第七课-中央处理器基础知识&quot;&gt;&lt;a href=&quot;#第七课-中央处理器基础知识&quot; class=&quot;headerlink&quot; tit</summary>
       
     
     
@@ -40,31 +40,6 @@
     <category term="计算机科学速成课" scheme="https://lawrenceliaoxmu.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/"/>
     
     <category term="计算机科学导论" scheme="https://lawrenceliaoxmu.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你好！</title>
-    <link href="https://lawrenceliaoxmu.github.io/2023/08/07/%E4%BD%A0%E5%A5%BD%EF%BC%81/"/>
-    <id>https://lawrenceliaoxmu.github.io/2023/08/07/%E4%BD%A0%E5%A5%BD%EF%BC%81/</id>
-    <published>2023-08-07T12:59:05.000Z</published>
-    <updated>2023-08-07T13:26:35.894Z</updated>
-    
-    <content type="html"><![CDATA[<p>欢迎来到我的博客，我是廖羿杰，一名从普通高中出来的普通大学生，即将就读于厦门大学计算机类，将来在大二分流的时候决定学习数字媒体技术专业。</p><h3 id="这个网站是用来干什么的？"><a href="#这个网站是用来干什么的？" class="headerlink" title="这个网站是用来干什么的？"></a>这个网站是用来干什么的？</h3><p>主要是用于整理个人学习计算机和数媒技相关的笔记和心得，更好地提升个人能力，同时也可以作为日志来记录所见所闻所感。</p><h3 id="明明没有什么要说的为什么要分点？"><a href="#明明没有什么要说的为什么要分点？" class="headerlink" title="明明没有什么要说的为什么要分点？"></a>明明没有什么要说的为什么要分点？</h3><p>只是为了看看这上面的博文是怎么编辑的hhh</p><h3 id="另外！"><a href="#另外！" class="headerlink" title="另外！"></a>另外！</h3><p>特别感谢好友小丁在本博客建立时提供的帮助！<br>（等我之后在学怎么搞友情链接，我先把大神的网站放在这里）：<a href="https://www.ygxz.xyz/">一个小站</a> 还有 <a href="https://www.ygxz.in/">小站背面</a></p><h3 id="还有！"><a href="#还有！" class="headerlink" title="还有！"></a>还有！</h3><p>我其实是一个多年的电子音乐制作人（只不过因为高中学业就好久没制作了orz）<br>我有一些还听的过去的电子音乐作品（勉勉强强） 点击 <a href="https://music.163.com/#/playlist?id=8590118998">这里</a> 听一下</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;欢迎来到我的博客，我是廖羿杰，一名从普通高中出来的普通大学生，即将就读于厦门大学计算机类，将来在大二分流的时候决定学习数字媒体技术专业。&lt;/p&gt;
-&lt;h3 id=&quot;这个网站是用来干什么的？&quot;&gt;&lt;a href=&quot;#这个网站是用来干什么的？&quot; class=&quot;headerlink&quot;</summary>
-      
-    
-    
-    
-    <category term="日常记录" scheme="https://lawrenceliaoxmu.github.io/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="日常记录" scheme="https://lawrenceliaoxmu.github.io/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
