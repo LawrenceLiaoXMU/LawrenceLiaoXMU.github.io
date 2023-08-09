@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Lawrence Liao">
+
+
+    <meta name="subtitle" content="计算机学习记录">
+
+
+
+
+<title>《计算机科学速成课》第十、十一、十二课自学笔记：基础的编程 | Liao&#39;s Blog：一个小白的计算机-数字媒体技术学习记录</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Liao's Blog：一个小白的计算机-数字媒体技术学习记录" type="application/atom+xml">
+</head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Liao&#39;s Blog：计算机-数字媒体技术学习记录</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Liao&#39;s Blog：计算机-数字媒体技术学习记录</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">《计算机科学速成课》第十、十一、十二课自学笔记：基础的编程</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Lawrence Liao</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">2023 八月, 07&nbsp;&nbsp;22:16:58</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/">自学笔记</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>因为在课程中第十、十一、十二课联系较紧密，故在同一文档中梳理。<br>笔记结合课程、上网查询、个人理解整理，如有错误，恳请指正。</p>
+<h1 id="第十课-早期编程方式（程序如何进入计算机？）"><a href="#第十课-早期编程方式（程序如何进入计算机？）" class="headerlink" title="第十课 早期编程方式（程序如何进入计算机？）"></a>第十课 早期编程方式（程序如何进入计算机？）</h1><h2 id="一、插线编程"><a href="#一、插线编程" class="headerlink" title="一、插线编程"></a>一、插线编程</h2><h3 id="1-简单介绍"><a href="#1-简单介绍" class="headerlink" title="1.简单介绍"></a>1.简单介绍</h3><p>二十世纪时，计算机开始能够进行加减乘除等运算，甚至决定执行某指令的时间。此时，程序的正确执行需要程序员通过将插线板作为控制面板，通过对不同部分进行连线，互相穿数据和信号，世界上第一台电子计算机Eniac也是通过这种方式进行编程。</p>
+<h3 id="2-弊端"><a href="#2-弊端" class="headerlink" title="2.弊端"></a>2.弊端</h3><p>插线板编程很复杂，运行不同程序要重新接线，更换程序需要大量时间。</p>
+<h2 id="二、-冯诺依曼计算机"><a href="#二、-冯诺依曼计算机" class="headerlink" title="二、 冯诺依曼计算机"></a>二、 冯诺依曼计算机</h2><h3 id="1-简单介绍-1"><a href="#1-简单介绍-1" class="headerlink" title="1.简单介绍"></a>1.简单介绍</h3><p>内存的出现与发展，出现了“存储程序计算机”，能在内存里存储程和数据。其标志是一个ALU+数据寄存器（寄存器组）+指令寄存器+指令地址寄存器+内存，也就是前几集学的基本的CPU+RAM。</p>
+<h3 id="2-弊端-1"><a href="#2-弊端-1" class="headerlink" title="2.弊端"></a>2.弊端</h3><p>那时写入程序和输出数据还是通过对穿孔纸卡进行打孔，相当于将数据放在纸卡上，如果弄乱了卡片需要大量时间来整理。（还很费纸）</p>
+<h2 id="三、面板编程"><a href="#三、面板编程" class="headerlink" title="三、面板编程"></a>三、面板编程</h2><h3 id="1-简单介绍-2"><a href="#1-简单介绍-2" class="headerlink" title="1.简单介绍"></a>1.简单介绍</h3><p>1980年代前，出现面板编程，即用一大堆开关进行控制。通过开关控制进行二进制代码的编写，然后就可以运行程序。</p>
+<h3 id="2-弊端（以上三个都有）"><a href="#2-弊端（以上三个都有）" class="headerlink" title="2.弊端（以上三个都有）"></a>2.弊端（以上三个都有）</h3><p>使用门槛较高，编程者需要非常了解底层硬件，比如操作码和寄存器等等。</p>
+<hr>
+<h1 id="第十一课-编程语言发展史（从硬件到软件）"><a href="#第十一课-编程语言发展史（从硬件到软件）" class="headerlink" title="第十一课 编程语言发展史（从硬件到软件）"></a>第十一课 编程语言发展史（从硬件到软件）</h1><ul>
+<li>不同的语言可以只一种数据的多种表现方式。就像英语和摩斯密码，虽然二者的符号和表达不同，但是可以传达相同的信息</li>
+</ul>
+<h2 id="一、机器语言"><a href="#一、机器语言" class="headerlink" title="一、机器语言"></a>一、机器语言</h2><p>二进制是处理器能理解的语言，“机器语言”或者“机器码”。早期，人们会先用普通的语言表达出希望计算机进行的一步步程序（这叫做伪代码），然后根据“操作码表”将它一个个对应着转换为二进制机器码，再将其传递给计算机</p>
+<h2 id="二、汇编语言（也是低级语言）"><a href="#二、汇编语言（也是低级语言）" class="headerlink" title="二、汇编语言（也是低级语言）"></a>二、汇编语言（也是低级语言）</h2><p>1940-1950年代，程序员开发一种新语言，更可读更高层次。每一个操作码都会分配一个简单的名字，叫“助记符”。比如代表“将A中数据存入寄存器12”的一大串二进制数字，可以被写成LOAD_A 12，通过汇编器，计算机会识别汇编语言，再将其转化为机器语言。</p>
+<ul>
+<li>汇编器有很多好用的功能，其中一个就是自动分析JUMP地址，程序员写程序时，只需写入可跳转的标签，汇编器就会自己跳转分析。不会因为插入指令而改变指令的顺序而导致JUMP的目标位置发生变化。<br> <img src="/images/111.png" alt="Lena"></li>
+<li>这是图1 表现了跳转标签的使用</li>
+</ul>
+<h2 id="三、高级编程语言与编译器的出现"><a href="#三、高级编程语言与编译器的出现" class="headerlink" title="三、高级编程语言与编译器的出现"></a>三、高级编程语言与编译器的出现</h2><p>高级编程语言可以将原本的十几二十条指令转化为简单的一句话，使编程者不用再思考内存和寄存器位置这种底层细节。编译器就是专门把高级语言转成低级语言的工具。<br> <img src="/images/112.png" alt="Lena"></p>
+<ul>
+<li>这是图2<br>早期的高级编程语言有A-0语言和Fortran语言。这些语言的使用虽然会使运行速度稍稍变慢（计算机执行程序的步骤变多了），但大大提高了代码编写的速度。<br>起初的语言和编译器并未统一，大部分编程语言和编译器只能运行在一种计算机上。后来成立的了数据系统语言委员会。开发了通用编程语言Cobol，可以在不同机器上通用，做到一次编写，万处运行。</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Lawrence Liao</span>
+                    </p>
+                
+                
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>天天开心！_(:з」∠)_</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/"># 计算机科学速成课</a>
+                    
+                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA/"># 计算机科学导论</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/08/07/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%88CPU%EF%BC%89/">《计算机科学速成课》第七、八、九课自学笔记：有关中央处理器（CPU）</a>
+            
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Lawrence Liao | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
